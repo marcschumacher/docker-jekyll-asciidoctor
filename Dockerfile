@@ -2,8 +2,6 @@ FROM ubuntu:15.10
 
 MAINTAINER Marc Schumacher "docker@marc-schumacher.de"
 
-from ubuntu:precise
-
 RUN apt-get -y update && apt-get install -y \
     curl \
     build-essential \
