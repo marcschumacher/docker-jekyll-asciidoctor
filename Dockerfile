@@ -17,7 +17,7 @@ RUN /usr/local/rvm/bin/rvm-shell && rvm requirements && rvm install 2.3.0 && rvm
 
 ENV PATH /usr/local/rvm/rubies/ruby-2.3.0/bin:/usr/local/rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
-ADD Gemfile /root/
+ADD ./Gemfile /root/
 
 RUN cd /root/ && gem install bundler
 
