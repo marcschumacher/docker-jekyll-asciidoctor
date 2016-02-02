@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'jekyll'
 gem 'asciidoctor'
-gem 'jekyll-asciidoc', :git => 'git@github.com:asciidoctor/jekyll-asciidoc.git'
+gem 'jekyll-asciidoc', :git => 'https://github.com/asciidoctor/jekyll-asciidoc.git'
 gem 'tilt'
 gem 'haml'
 gem 'slim'
