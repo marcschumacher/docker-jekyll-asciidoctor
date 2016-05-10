@@ -5,6 +5,7 @@ MAINTAINER Marc Schumacher "docker@marc-schumacher.de"
 RUN apt-get -y update && apt-get install -y \
     build-essential \
     curl \
+    debconf \
     git \
     graphviz \
     imagemagick \
@@ -15,12 +16,16 @@ RUN apt-get -y update && apt-get install -y \
     python-dev \
     python-gtk2 \
     python-pip  && \
+    locale-gen en_US.UTF-8 && \
+    dpkg-reconfigure locales && \
     pip install blockdiag actdiag seqdiag nwdiag && \
     pip install shaape && \
     npm install -g mermaid  && \
     npm install -g wavedrom-cli  && \
     gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 && \
     curl -L https://get.rvm.io | bash -s stable
+
+ENV LC_ALL=en_US.utf8 LANGUAGE=en_US.utf8
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 
