@@ -10,12 +10,15 @@ RUN apt-get -y update && apt-get install -y \
     graphviz \
     imagemagick \
     libjpeg-dev \
+    libyaml-dev \
     nodejs \
     npm \
     openjdk-8-jdk \
     python-dev \
     python-gtk2 \
-    python-pip  && \
+    python-pip  \
+    python-webcolors \
+    python-pil && \
     locale-gen en_US.UTF-8 && \
     dpkg-reconfigure locales && \
     pip install blockdiag actdiag seqdiag nwdiag && \
@@ -34,6 +37,7 @@ RUN apt-get -y update && apt-get install -y \
         curl \
     && apt-get clean \
     && rm -rf /tmp/* /var/lib/apt/lists/*
+
 
 ENV LC_ALL=en_US.utf8 LANGUAGE=en_US.utf8
 
