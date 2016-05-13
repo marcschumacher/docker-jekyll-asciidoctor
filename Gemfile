@@ -22,3 +22,5 @@ gem 'jemoji'
 gem 'jekyll-sitemap'
 gem 'jekyll-feed'
 gem 'jekyll-watch'
+gem 'html-proofer'
+
