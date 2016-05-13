@@ -11,6 +11,7 @@ RUN apt-get -y update && apt-get install -y \
     imagemagick \
     libjpeg-dev \
     libyaml-dev \
+    linkchecker \
     nodejs \
     npm \
     openjdk-8-jdk \
@@ -18,25 +19,28 @@ RUN apt-get -y update && apt-get install -y \
     python-gtk2 \
     python-pip  \
     python-webcolors \
-    python-pil && \
+    python-pil \
+    rsync \
+    w3c-linkchecker && \
     locale-gen en_US.UTF-8 && \
     dpkg-reconfigure locales && \
     pip install blockdiag actdiag seqdiag nwdiag && \
     pip install shaape && \
+    pip install python-frontmatter && \
     npm install -g mermaid  && \
     npm install -g wavedrom-cli  && \
     gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 && \
     curl -L https://get.rvm.io | bash -s stable && \
-    mkdir /tmp/phantomjs \
-    && curl -L https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2 \
-           | tar -xj --strip-components=1 -C /tmp/phantomjs \
-    && cd /tmp/phantomjs \
-    && mv bin/phantomjs /usr/local/bin \
-    && cd \
-    && apt-get purge --auto-remove -y \
-        curl \
-    && apt-get clean \
-    && rm -rf /tmp/* /var/lib/apt/lists/*
+    mkdir /tmp/phantomjs &&  \
+    curl -L https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2 \
+           | tar -xj --strip-components=1 -C /tmp/phantomjs && \
+    cd /tmp/phantomjs && \
+    mv bin/phantomjs /usr/local/bin && \
+    cd && \
+    apt-get purge --auto-remove -y \
+        curl && \
+    apt-get clean && \
+    rm -rf /tmp/* /var/lib/apt/lists/*
 
 
 ENV LC_ALL=en_US.utf8 LANGUAGE=en_US.utf8
@@ -53,4 +57,5 @@ ADD ./Gemfile /root/
 
 RUN cd /root/  && gem update --system && gem install bundler && bundle install
 
+ENV HOME  /var/local/jekyll
 WORKDIR /var/local/jekyll
