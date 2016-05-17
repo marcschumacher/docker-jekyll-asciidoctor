@@ -7,6 +7,7 @@ RUN apt-get -y update && apt-get install -y \
     curl \
     debconf \
     git \
+    gnuplot \
     graphviz \
     imagemagick \
     libjpeg-dev \
@@ -19,12 +20,14 @@ RUN apt-get -y update && apt-get install -y \
     python-gtk2 \
     python-pip  \
     python-webcolors \
+    python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas python-sympy python-nose \
     python-pil \
     rsync \
     w3c-linkchecker && \
     locale-gen en_US.UTF-8 && \
     dpkg-reconfigure locales && \
     pip install blockdiag actdiag seqdiag nwdiag && \
+    pip install seaborn && \
     pip install shaape && \
     pip install python-frontmatter && \
     npm install -g mermaid  && \
