@@ -28,6 +28,7 @@ RUN apt-get -y update && apt-get install -y \
     dpkg-reconfigure locales && \
     pip install blockdiag actdiag seqdiag nwdiag && \
     pip install seaborn && \
+    pip install prettyplotlib && \
     pip install shaape && \
     pip install python-frontmatter && \
     npm install -g mermaid  && \
