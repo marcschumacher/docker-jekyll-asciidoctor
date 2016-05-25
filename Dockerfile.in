@@ -61,5 +61,3 @@ ADD ./Gemfile /root/
 
 RUN cd /root/  && gem update --system && gem install bundler && bundle install
 
-ENV HOME  /var/local/jekyll
-WORKDIR /var/local/jekyll
