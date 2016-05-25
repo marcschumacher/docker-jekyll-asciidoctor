@@ -1,6 +1,6 @@
 FROM ubuntu:15.10
 
-MAINTAINER Marc Schumacher "docker@marc-schumacher.de"
+MAINTAINER Michael Haberler <haberlerm@gmail.com>
 
 RUN apt-get -y update && apt-get install -y \
     build-essential \
