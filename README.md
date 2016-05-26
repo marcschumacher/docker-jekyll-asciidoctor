@@ -36,6 +36,7 @@ Host github.com
   UserKnownHostsFile=/dev/null
   IdentityFile /home/jenkins/.ssh/<name of private key>
 ````
+Such a custom image is used to format _and_ deploy the machinekit.io website to github.
 
 To build such a custom image, review, edit and run [gen-user-img.sh script](https://github.com/mhaberler/docker-jekyll-asciidoctor/blob/master/jekyll-asciidoctor-custom/gen-user-img.sh).
 
