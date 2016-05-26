@@ -15,9 +15,11 @@ format and serve the site on port 4000 like so:
   ./docker-jekyll-asciidoctor.sh [jekyll site directory]
 ````
 
-# Custom variants for jenkins use
+# Custom image variant for jenkins use
 
-Deploying via git from within a Docker image run by Jenkins is rather tricky, which is why there is jekyll-asciidoctor-custom. You need this only if deploying from jenkins via git push.
+Just for formatting and serving the site for local editing the jekyll-asciidoctor-base image is sufficient.
+
+However, deploying via git from within a Docker image run by Jenkins is rather tricky, which is why there is jekyll-asciidoctor-custom. You need this only if deploying from jenkins via git push.
 
 This is what I found:
 - for push via ssh git url to work, there must be a valid user on the image - with /etc/passwd entry, home directory and all
