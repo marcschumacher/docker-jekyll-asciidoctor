@@ -37,6 +37,6 @@ Host github.com
   IdentityFile /home/jenkins/.ssh/<name of private key>
 ````
 
-
+To build such a custom image, review, edit and run https://github.com/mhaberler/docker-jekyll-asciidoctor/blob/master/jekyll-asciidoctor-custom/gen-user-img.sh script.
 
 
