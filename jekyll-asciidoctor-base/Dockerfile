@@ -61,3 +61,8 @@ ADD ./Gemfile /root/
 
 RUN cd /root/  && gem update --system && gem install bundler && bundle install
 
+# in case we use the image as a server
+# 35279 is for the LiveReload service
+EXPOSE 4000 80 443 35729
+
+WORKDIR /work

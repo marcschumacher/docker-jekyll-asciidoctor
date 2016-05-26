@@ -11,3 +11,4 @@ under /home/$user/.ssh like so:
 -v /var/lib/jenkins/.ssh/machinekit-ci:/home/$username/.ssh
 
 and use the SSH agent plugin to supply the passphrase on the SSH key.
+
