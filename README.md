@@ -2,7 +2,7 @@
 
 This docker image is ready to build and serve jekyll sites. It is used to format the machinekit.io website.
 
-Beyond jekyll-asciidoctor, this image includes all tools supported by the asciidoctor-diagram plugin.
+Beyond [jekyll-asciidoctor](https://github.com/asciidoctor/jekyll-asciidoc), this image includes all tools supported by the [asciidoctor-diagram](https://github.com/asciidoctor/asciidoctor-diagram) plugin.
 
 build as:
 ````
@@ -37,6 +37,6 @@ Host github.com
   IdentityFile /home/jenkins/.ssh/<name of private key>
 ````
 
-To build such a custom image, review, edit and run https://github.com/mhaberler/docker-jekyll-asciidoctor/blob/master/jekyll-asciidoctor-custom/gen-user-img.sh script.
+To build such a custom image, review, edit and run [gen-user-img.sh script](https://github.com/mhaberler/docker-jekyll-asciidoctor/blob/master/jekyll-asciidoctor-custom/gen-user-img.sh).
 
 
