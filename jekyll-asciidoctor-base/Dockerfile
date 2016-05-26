@@ -10,6 +10,7 @@ RUN apt-get -y update && apt-get install -y \
     gnuplot \
     graphviz \
     imagemagick \
+    libcurl3 \
     libjpeg-dev \
     libyaml-dev \
     linkchecker \
