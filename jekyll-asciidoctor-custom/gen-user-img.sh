@@ -16,10 +16,8 @@ RUN adduser --disabled-password --uid $uid --gid $gid --gecos "$username user" $
 ENV HOME  /home/$username
 USER $username
 
-# in case we use it as a server
-EXPOSE 35729 4000 80
 EOF
 
 echo building Docker image  $imgname:$tag
 
-echo  docker build -t $imgname:$tag .
+docker build -t $imgname:$tag .
