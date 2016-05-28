@@ -31,7 +31,7 @@ gem 'jekyll-youtube'
 gem 'jekyll-asciinema'
 
 #https://github.com/bwillis/jekyll-github-sample
-gem 'jekyll_github_sample'
+#gem 'jekyll_github_sample'
 
 # nice: https://github.com/eug/jekyll-video-embed
 # unsure how to install in container
