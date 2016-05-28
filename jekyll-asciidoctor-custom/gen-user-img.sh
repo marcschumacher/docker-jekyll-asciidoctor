@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-username=mah
+username=jenkins
 uid=$(id -u $username)
 gid=$(id -g $username)
 imgname=machinekit/jekyll-asciidoctor
