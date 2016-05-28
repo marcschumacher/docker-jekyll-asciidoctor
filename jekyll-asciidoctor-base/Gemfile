@@ -1,10 +1,7 @@
 source 'https://rubygems.org'
 
 # this may load higher minor versions like 3.1.4
-#gem 'jekyll', '~> 3.1.3'
-
-# we want exactly this
-gem 'jekyll', '3.1.3'
+gem 'jekyll', '~> 3.1.3'
 
 gem 'asciidoctor', '~> 1.5.4'
 #gem 'jekyll-asciidoc', :git => 'https://github.com/asciidoctor/jekyll-asciidoc.git'
