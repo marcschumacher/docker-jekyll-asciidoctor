@@ -24,3 +24,17 @@ gem 'jekyll-feed'
 gem 'jekyll-watch'
 gem 'html-proofer'
 
+# https://github.com/dommmel/jekyll-youtube
+gem 'jekyll-youtube'
+
+# https://github.com/mnuessler/jekyll-asciinema
+gem 'jekyll-asciinema'
+
+#https://github.com/bwillis/jekyll-github-sample
+gem 'jekyll_github_sample'
+
+# nice: https://github.com/eug/jekyll-video-embed
+# unsure how to install in container
+
+#https://github.com/toshimaru/jekyll-toc
+gem 'jekyll-toc'
