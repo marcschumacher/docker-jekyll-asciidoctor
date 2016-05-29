@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-username=jenkins
+username=$1
 uid=$(id -u $username)
 gid=$(id -g $username)
 imgname=machinekit/jekyll-asciidoctor
@@ -18,6 +18,6 @@ USER $username
 
 EOF
 
-echo building Docker image  $imgname:$tag
+#echo building Docker image  $imgname:$tag
 
-docker build -t $imgname:$tag .
+#docker build -t $imgname:$tag .
