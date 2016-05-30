@@ -40,3 +40,13 @@ gem 'jekyll-asciinema'
 
 #https://github.com/toshimaru/jekyll-toc
 gem 'jekyll-toc'
+
+# https://github.com/jekyll/jekyll-seo-tag
+gem 'jekyll-seo-tag'
+
+#https://github.com/jekyll/jekyll-import
+# can suck Charles's blog.machinekit.io into jekyll!
+gem 'jekyll-import'
+
+# https://github.com/jekyll/jekyll-gist
+gem 'jekyll-gist'
