@@ -58,5 +58,8 @@ gem 'guard-livereload'
 # plan B:
 gem 'guard-jekyll'
 
+# http://dan.doezema.com/2014/01/setting-up-livereload-with-jekyll/
+gem 'guard-jekyll-plus'
+
 # https://rubygems.org/gems/jekyll-mermaid/versions/1.0.0
 gem 'jekyll-mermaid', '~> 1.0'
