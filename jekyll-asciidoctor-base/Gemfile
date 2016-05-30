@@ -50,3 +50,11 @@ gem 'jekyll-import'
 
 # https://github.com/jekyll/jekyll-gist
 gem 'jekyll-gist'
+
+# http://stackoverflow.com/questions/8395526/using-live-reload-with-jekyll
+gem 'guard'
+gem 'guard-livereload'
+
+# plan B:
+gem 'guard-jekyll'
+
