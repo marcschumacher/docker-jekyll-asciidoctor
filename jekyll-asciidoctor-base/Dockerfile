@@ -3,9 +3,11 @@ FROM ubuntu:15.10
 MAINTAINER Michael Haberler <haberlerm@gmail.com>
 
 RUN apt-get -y update && apt-get install -y \
-    asciinema \
     build-essential \
-    curl \
+    curl && \
+    curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
+    apt-get install -y \
+    asciinema \
     debconf \
     git \
     gnuplot \
@@ -16,7 +18,6 @@ RUN apt-get -y update && apt-get install -y \
     libyaml-dev \
     linkchecker \
     nodejs \
-    npm \
     openjdk-8-jdk \
     python-dev \
     python-gtk2 \
