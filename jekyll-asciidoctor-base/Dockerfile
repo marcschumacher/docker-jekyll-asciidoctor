@@ -15,16 +15,22 @@ RUN apt-get -y update && apt-get install -y \
     imagemagick \
     libcurl3 \
     libjpeg-dev \
+    libprotoc-dev \
+    libprotobuf-dev \
     libyaml-dev \
     linkchecker \
     nodejs \
     openjdk-8-jdk \
+    protobuf-compiler \
     python-dev \
     python-gtk2 \
     python-pip  \
     python-webcolors \
     python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas python-sympy python-nose \
     python-pil \
+    qt5-default \
+    qt5-qmake \
+    qt-sdk \
     rsync \
     w3c-linkchecker && \
     locale-gen en_US.UTF-8 && \
@@ -42,12 +48,7 @@ RUN apt-get -y update && apt-get install -y \
     curl -L https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2 \
            | tar -xj --strip-components=1 -C /tmp/phantomjs && \
     cd /tmp/phantomjs && \
-    mv bin/phantomjs /usr/local/bin && \
-    cd && \
-    apt-get purge --auto-remove -y \
-        curl && \
-    apt-get clean && \
-    rm -rf /tmp/* /var/lib/apt/lists/*
+    mv bin/phantomjs /usr/local/bin
 
 
 ENV LC_ALL=en_US.utf8 LANGUAGE=en_US.utf8
@@ -62,7 +63,20 @@ ENV PATH /usr/local/rvm/rubies/ruby-2.3.0/bin:/usr/local/rvm/bin:/usr/local/sbin
 
 ADD ./Gemfile /root/
 
-RUN cd /root/  && gem update --system && gem install bundler && bundle install
+RUN cd /root/  && \
+    gem update --system && gem install bundler && bundle install && \
+    git clone --depth=1 https://github.com/mhaberler/protoc-gen-doc.git  && \
+    cd protoc-gen-doc   && \
+    qmake   && \
+    make  && \
+    cp protoc-gen-doc /usr/bin  && \
+    cd ..   && \
+    rm -rf protoc-gen-doc  && \
+    cd && \
+    apt-get purge --auto-remove -y curl qt-sdk qt5-core qt5-default \
+    	    libprotoc-dev libprotobuf-dev && \
+    apt-get clean && \
+    rm -rf /tmp/* /var/lib/apt/lists/*
 
 # in case we use the image as a server
 # 35279 is for the LiveReload service
