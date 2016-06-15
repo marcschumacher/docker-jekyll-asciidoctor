@@ -7,13 +7,17 @@ Beyond [jekyll-asciidoctor](https://github.com/asciidoctor/jekyll-asciidoc), thi
 build as:
 ````
   cd jekyll-asciidoctor-base
-  docker build -t machinekit/jekyll-asciidoctor-base .
+  docker build -t haberlerm/docker-jekyll-asciidoctor .
 ````
 
-format and serve the site on port 4000 like so:
+This base image is also built automatically on dockerhub: https://hub.docker.com/r/haberlerm/docker-jekyll-asciidoctor/~/dockerfile/
+hence can be obtained by
+
 ````
-  ./docker-jekyll-asciidoctor.sh [jekyll site directory]
+  docker pull haberlerm/docker-jekyll-asciidoctor
 ````
+
+To locally format and serve a site, see this gist: https://gist.github.com/mhaberler/ede68eae275c38a5364734c065a1b9c0
 
 # Custom image variant for jenkins use
 
