@@ -29,6 +29,7 @@ RUN apt-get -y update && apt-get install -y \
     python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas python-sympy python-nose \
     python-pil \
     qt5-default \
+    libqt5core5a \
     qt5-qmake \
     rsync \
     w3c-linkchecker && \
@@ -82,3 +83,4 @@ RUN cd /root/  && \
 EXPOSE 4000 80 443 35729
 
 WORKDIR /work
+
