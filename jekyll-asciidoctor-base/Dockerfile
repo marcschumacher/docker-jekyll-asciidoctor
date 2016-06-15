@@ -72,7 +72,7 @@ RUN cd /root/  && \
     cd ..   && \
     rm -rf protoc-gen-doc  && \
     cd && \
-    apt-get purge --auto-remove -y curl qt5-core qt5-default \
+    apt-get purge --auto-remove -y curl qt5-qmake qt5-default \
     	    libprotoc-dev libprotobuf-dev && \
     apt-get clean && \
     rm -rf /tmp/* /var/lib/apt/lists/*
