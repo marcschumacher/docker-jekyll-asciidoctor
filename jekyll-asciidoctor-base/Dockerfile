@@ -19,6 +19,7 @@ RUN apt-get -y update && apt-get install -y \
     libprotobuf-dev \
     libyaml-dev \
     linkchecker \
+    mscgen \
     nodejs \
     openjdk-8-jdk \
     protobuf-compiler \
