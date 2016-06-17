@@ -70,14 +70,7 @@ RUN cd /root/  && \
     cd protoc-gen-doc   && \
     qmake   && \
     make  && \
-    cp protoc-gen-doc /usr/bin  && \
-    cd ..   && \
-    rm -rf protoc-gen-doc  && \
-    cd && \
-    apt-get purge --auto-remove -y curl qt5-qmake qt5-default \
-    	    libprotoc-dev libprotobuf-dev && \
-    apt-get clean && \
-    rm -rf /tmp/* /var/lib/apt/lists/*
+    cp protoc-gen-doc /usr/local/bin
 
 # in case we use the image as a server
 # 35279 is for the LiveReload service
