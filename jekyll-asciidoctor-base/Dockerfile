@@ -26,9 +26,11 @@ RUN apt-get -y update && apt-get install -y \
     python-dev \
     python-gtk2 \
     python-pip  \
+    python-pygments \
     python-webcolors \
     python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas python-sympy python-nose \
     python-pil \
+    python-setuptools \
     qt5-default \
     libqt5core5a \
     qt5-qmake \
@@ -70,7 +72,12 @@ RUN cd /root/  && \
     cd protoc-gen-doc   && \
     qmake   && \
     make  && \
-    cp protoc-gen-doc /usr/local/bin
+    cp protoc-gen-doc /usr/local/bin && \
+    cd /root && \
+    apt-get install -y  && \
+    git clone https://github.com/mhaberler/pygments_machinekit.git && \
+    cd pygments_machinekit && \
+    python setup.py develop
 
 # in case we use the image as a server
 # 35279 is for the LiveReload service
