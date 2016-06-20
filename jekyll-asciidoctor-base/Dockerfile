@@ -72,8 +72,17 @@ RUN cd /root/  && \
     cd protoc-gen-doc   && \
     qmake   && \
     make  && \
-    cp protoc-gen-doc /usr/local/bin
-
+    cp protoc-gen-doc /usr/local/bin && \
+    cd /root/  && \
+    git clone -b machinekit --single-branch https://github.com/mhaberler/pygments.git && \
+    cd pygments   && \
+    make mapfiles   && \
+    python setup.py install && \
+    cd $(dirname $(gem which pygments.rb))/../vendor && \
+    rm -rf pygments-main && \
+    ln -s /root/pygments pygments-main && \
+    cd $(dirname $(gem which pygments.rb))/.. && \
+    ruby cache-lexers.rb
 
 # in case we use the image as a server
 # 35279 is for the LiveReload service
