@@ -30,6 +30,7 @@ RUN apt-get -y update && apt-get install -y \
     python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas python-sympy python-nose \
     python-pil \
     python-protobuf \
+    python-pygooglechart \
     python-setuptools \
     qt5-default \
     libqt5core5a \
