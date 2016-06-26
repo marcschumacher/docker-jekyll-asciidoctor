@@ -44,6 +44,9 @@ RUN apt-get -y update && apt-get install -y \
     pip install prettyplotlib && \
     pip install shaape && \
     pip install python-frontmatter && \
+    pip install blockdiagcontrib-octicons && \
+    pip install blockdiagcontrib-cisco && \
+    pip install blockdiagcontrib-class && \
     npm install -g mermaid  && \
     npm install -g wavedrom-cli  && \
     gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 && \
