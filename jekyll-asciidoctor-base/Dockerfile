@@ -9,6 +9,7 @@ RUN apt-get -y update && apt-get install -y \
     apt-get install -y \
     asciinema \
     debconf \
+    gcc \
     git \
     gnuplot \
     graphviz \
@@ -19,6 +20,7 @@ RUN apt-get -y update && apt-get install -y \
     libprotobuf-dev \
     libyaml-dev \
     linkchecker \
+    make \
     mscgen \
     nodejs \
     openjdk-8-jdk \
@@ -36,6 +38,7 @@ RUN apt-get -y update && apt-get install -y \
     libqt5core5a \
     qt5-qmake \
     rsync \
+    ruby-dev \
     w3c-linkchecker && \
     locale-gen en_US.UTF-8 && \
     dpkg-reconfigure locales && \
