@@ -70,3 +70,6 @@ gem 'jekyll-mermaid', '~> 1.0'
 
 # https://github.com/RobertDeRose/jekyll-livereload
 gem 'jekyll-livereload'
+
+# https://github.com/jordansissel/fpm
+gem 'fpm'
