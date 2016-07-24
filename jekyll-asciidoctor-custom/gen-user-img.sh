@@ -13,7 +13,7 @@ FROM haberlerm/docker-jekyll-asciidoctor
 
 RUN groupadd --gid $gid $username
 RUN adduser --disabled-password --uid $uid --gid $gid --gecos "$username user" $username && \
-	apt-get -y install uuid-runtime
+	apt-get -y install uuid-runtime sshpass
 ENV HOME  /home/$username
 USER $username
 
