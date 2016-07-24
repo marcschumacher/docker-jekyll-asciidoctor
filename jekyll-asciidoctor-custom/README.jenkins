@@ -1,0 +1,14 @@
+this image can be used within jenkins including pushing
+with git to a deployment site
+
+for permissions and ssh credentials reasons, the
+jenkins host user/uid/gid and the container user should match
+
+to use the image for git deployment, mount the ssh key directory
+under /home/$user/.ssh like so:
+
+--user $(id -u $username):$(id -g $username) 
+-v /var/lib/jenkins/.ssh/machinekit-ci:/home/$username/.ssh
+
+and use the SSH agent plugin to supply the passphrase on the SSH key.
+
